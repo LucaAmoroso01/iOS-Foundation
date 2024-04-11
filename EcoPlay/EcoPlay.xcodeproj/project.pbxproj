@@ -11,6 +11,9 @@
 		929D0B912BC7D238000187FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B902BC7D238000187FF /* ContentView.swift */; };
 		929D0B932BC7D239000187FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B922BC7D239000187FF /* Assets.xcassets */; };
 		929D0B962BC7D239000187FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B952BC7D239000187FF /* Preview Assets.xcassets */; };
+		92BD152A2BC7E490006767D1 /* recycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92BD15292BC7E490006767D1 /* recycle.gif */; };
+		92BD152F2BC7ED18006767D1 /* LandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD152E2BC7ED18006767D1 /* LandView.swift */; };
+		92BD15332BC8127E006767D1 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 92BD15322BC8127E006767D1 /* SwiftUIGIF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		929D0B902BC7D238000187FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		929D0B922BC7D239000187FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929D0B952BC7D239000187FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92BD15292BC7E490006767D1 /* recycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle.gif; sourceTree = "<group>"; };
+		92BD152E2BC7ED18006767D1 /* LandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BD15332BC8127E006767D1 /* SwiftUIGIF in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +57,10 @@
 		929D0B8D2BC7D238000187FF /* EcoPlay */ = {
 			isa = PBXGroup;
 			children = (
+				92BD152B2BC7E51B006767D1 /* images */,
 				929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */,
 				929D0B902BC7D238000187FF /* ContentView.swift */,
+				92BD152E2BC7ED18006767D1 /* LandView.swift */,
 				929D0B922BC7D239000187FF /* Assets.xcassets */,
 				929D0B942BC7D239000187FF /* Preview Content */,
 			);
@@ -65,6 +73,14 @@
 				929D0B952BC7D239000187FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92BD152B2BC7E51B006767D1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				92BD15292BC7E490006767D1 /* recycle.gif */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +99,9 @@
 			dependencies = (
 			);
 			name = EcoPlay;
+			packageProductDependencies = (
+				92BD15322BC8127E006767D1 /* SwiftUIGIF */,
+			);
 			productName = EcoPlay;
 			productReference = 929D0B8B2BC7D238000187FF /* EcoPlay.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 929D0B822BC7D238000187FF;
+			packageReferences = (
+				92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */,
+			);
 			productRefGroup = 929D0B8C2BC7D238000187FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +149,7 @@
 			files = (
 				929D0B962BC7D239000187FF /* Preview Assets.xcassets in Resources */,
 				929D0B932BC7D239000187FF /* Assets.xcassets in Resources */,
+				92BD152A2BC7E490006767D1 /* recycle.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +162,7 @@
 			files = (
 				929D0B912BC7D238000187FF /* ContentView.swift in Sources */,
 				929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */,
+				92BD152F2BC7ED18006767D1 /* LandView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-gif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92BD15322BC8127E006767D1 /* SwiftUIGIF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */;
+			productName = SwiftUIGIF;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 929D0B832BC7D238000187FF /* Project object */;
 }
