@@ -31,19 +31,30 @@ struct SecondLandView: View {
                             .shadow(color: .black.opacity(25/100), radius: 2, x: 0, y: 4).blur(radius: 0.4)
                             .padding(.top, 20)
                         Spacer()
-                        Image("plastic-bottle")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(60)
-                            .background(
-                                Gradient(colors: [
-                                    Color(red: 81/255, green: 139/255, blue: 84/255),
-                                    Color(red: 27/255, green: 51/255, blue: 28/255)
-                                ]
-                                        )
-                            )
-                            .clipShape(Circle())
-                            .padding(25)
+                        HStack(spacing: 20) {
+                            ForEach(1..<4) { i in
+                                Text("?")
+                                    .font(.system(size: 20, weight: .bold))
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(.white)
+                                    .padding(.horizontal, 20)
+                                    .padding(.vertical, 30)
+                                    .background(Color(red: 27/255, green: 51/255, blue: 28/255))
+                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                            }
+                        }
+                        HStack(spacing: 20) {
+                            ForEach(1..<4) { i in
+                                Text("?")
+                                    .font(.system(size: 20, weight: .bold))
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(.white)
+                                    .padding(.horizontal, 20)
+                                    .padding(.vertical, 30)
+                                    .background(Color(red: 27/255, green: 51/255, blue: 28/255))
+                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                            }
+                        }
                         Spacer()
                     }
                     .frame(width: 286, height: 324)
