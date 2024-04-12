@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADE62BC9354000C44F38 /* FirstLandView.swift */; };
+		9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADE92BC9365E00C44F38 /* OFL.txt */; };
+		9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */; };
+		9270ADEE2BC9365F00C44F38 /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */; };
 		929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */; };
 		929D0B912BC7D238000187FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B902BC7D238000187FF /* ContentView.swift */; };
 		929D0B932BC7D239000187FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B922BC7D239000187FF /* Assets.xcassets */; };
 		929D0B962BC7D239000187FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B952BC7D239000187FF /* Preview Assets.xcassets */; };
 		92BD152A2BC7E490006767D1 /* recycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92BD15292BC7E490006767D1 /* recycle.gif */; };
-		92BD152F2BC7ED18006767D1 /* LandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD152E2BC7ED18006767D1 /* LandView.swift */; };
 		92BD15332BC8127E006767D1 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 92BD15322BC8127E006767D1 /* SwiftUIGIF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9270ADE62BC9354000C44F38 /* FirstLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLandView.swift; sourceTree = "<group>"; };
+		9270ADE92BC9365E00C44F38 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Bold.ttf"; sourceTree = "<group>"; };
+		9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Regular.ttf"; sourceTree = "<group>"; };
+		9270ADEF2BC9378400C44F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		929D0B8B2BC7D238000187FF /* EcoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoPlayApp.swift; sourceTree = "<group>"; };
 		929D0B902BC7D238000187FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		929D0B922BC7D239000187FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929D0B952BC7D239000187FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92BD15292BC7E490006767D1 /* recycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle.gif; sourceTree = "<group>"; };
-		92BD152E2BC7ED18006767D1 /* LandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9270ADE82BC9362C00C44F38 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9270ADE92BC9365E00C44F38 /* OFL.txt */,
+				9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */,
+				9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		929D0B822BC7D238000187FF = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +74,12 @@
 		929D0B8D2BC7D238000187FF /* EcoPlay */ = {
 			isa = PBXGroup;
 			children = (
+				9270ADEF2BC9378400C44F38 /* Info.plist */,
+				9270ADE82BC9362C00C44F38 /* fonts */,
 				92BD152B2BC7E51B006767D1 /* images */,
 				929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */,
 				929D0B902BC7D238000187FF /* ContentView.swift */,
-				92BD152E2BC7ED18006767D1 /* LandView.swift */,
+				9270ADE62BC9354000C44F38 /* FirstLandView.swift */,
 				929D0B922BC7D239000187FF /* Assets.xcassets */,
 				929D0B942BC7D239000187FF /* Preview Content */,
 			);
@@ -148,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				929D0B962BC7D239000187FF /* Preview Assets.xcassets in Resources */,
+				9270ADEE2BC9365F00C44F38 /* Play-Regular.ttf in Resources */,
+				9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */,
 				929D0B932BC7D239000187FF /* Assets.xcassets in Resources */,
+				9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */,
 				92BD152A2BC7E490006767D1 /* recycle.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,8 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				929D0B912BC7D238000187FF /* ContentView.swift in Sources */,
+				9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */,
 				929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */,
-				92BD152F2BC7ED18006767D1 /* LandView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +321,7 @@
 				DEVELOPMENT_TEAM = V2VTRYV2HK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcoPlay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +351,7 @@
 				DEVELOPMENT_TEAM = V2VTRYV2HK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcoPlay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
