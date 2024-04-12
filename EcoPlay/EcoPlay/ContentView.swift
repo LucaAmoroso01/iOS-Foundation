@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftUIGIF
+import NavigationTransitions
 
 struct ContentView: View {
     @State private var imageData: Data?
@@ -42,11 +43,22 @@ struct ContentView: View {
             .navigationBarHidden(true)
             .onAppear {
                 loadData()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     shouldNavigate = true
                 }
             }
-        }.aspectRatio(contentMode: .fill)
+        }
+        .navigationTransition(
+            .fade(.in).combined(with: .fade(.cross))
+            .animation(.easeIn(duration: 0.8))
+        )
+        .background(
+            Gradient(colors: [
+                Color.white
+                // Color(red: 81/255, green: 139/255, blue: 84/255),
+                // Color(red: 27/255, green: 51/255, blue: 28/255)
+            ])
+        )
     }
     
     private func loadData() {

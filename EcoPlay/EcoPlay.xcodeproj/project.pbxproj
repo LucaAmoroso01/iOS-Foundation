@@ -11,6 +11,8 @@
 		9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADE92BC9365E00C44F38 /* OFL.txt */; };
 		9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */; };
 		9270ADEE2BC9365F00C44F38 /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */; };
+		9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF02BC9413000C44F38 /* SecondLandView.swift */; };
+		9270ADF42BC9548200C44F38 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 9270ADF32BC9548200C44F38 /* NavigationTransitions */; };
 		929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */; };
 		929D0B912BC7D238000187FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B902BC7D238000187FF /* ContentView.swift */; };
 		929D0B932BC7D239000187FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B922BC7D239000187FF /* Assets.xcassets */; };
@@ -25,6 +27,7 @@
 		9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Bold.ttf"; sourceTree = "<group>"; };
 		9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Regular.ttf"; sourceTree = "<group>"; };
 		9270ADEF2BC9378400C44F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9270ADF02BC9413000C44F38 /* SecondLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLandView.swift; sourceTree = "<group>"; };
 		929D0B8B2BC7D238000187FF /* EcoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoPlayApp.swift; sourceTree = "<group>"; };
 		929D0B902BC7D238000187FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BD15332BC8127E006767D1 /* SwiftUIGIF in Frameworks */,
+				9270ADF42BC9548200C44F38 /* NavigationTransitions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,7 @@
 				929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */,
 				929D0B902BC7D238000187FF /* ContentView.swift */,
 				9270ADE62BC9354000C44F38 /* FirstLandView.swift */,
+				9270ADF02BC9413000C44F38 /* SecondLandView.swift */,
 				929D0B922BC7D239000187FF /* Assets.xcassets */,
 				929D0B942BC7D239000187FF /* Preview Content */,
 			);
@@ -120,6 +125,7 @@
 			name = EcoPlay;
 			packageProductDependencies = (
 				92BD15322BC8127E006767D1 /* SwiftUIGIF */,
+				9270ADF32BC9548200C44F38 /* NavigationTransitions */,
 			);
 			productName = EcoPlay;
 			productReference = 929D0B8B2BC7D238000187FF /* EcoPlay.app */;
@@ -151,6 +157,7 @@
 			mainGroup = 929D0B822BC7D238000187FF;
 			packageReferences = (
 				92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */,
+				9270ADF22BC9548200C44F38 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */,
 			);
 			productRefGroup = 929D0B8C2BC7D238000187FF /* Products */;
 			projectDirPath = "";
@@ -183,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929D0B912BC7D238000187FF /* ContentView.swift in Sources */,
+				9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */,
 				9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */,
 				929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */,
 			);
@@ -394,6 +402,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9270ADF22BC9548200C44F38 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davdroman/swiftui-navigation-transitions.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.3;
+			};
+		};
 		92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/globulus/swiftui-gif.git";
@@ -405,6 +421,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9270ADF32BC9548200C44F38 /* NavigationTransitions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9270ADF22BC9548200C44F38 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */;
+			productName = NavigationTransitions;
+		};
 		92BD15322BC8127E006767D1 /* SwiftUIGIF */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 92BD15312BC8127E006767D1 /* XCRemoteSwiftPackageReference "swiftui-gif" */;
