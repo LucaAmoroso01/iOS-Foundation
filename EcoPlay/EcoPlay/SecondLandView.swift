@@ -94,7 +94,7 @@ struct SecondLandView: View {
                 }
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color(red: 153.0/255, green: 206.0/255, blue: 119.0/255, opacity: 100))
+            .background(Color.backgroundGreen)
             .navigationBarBackButtonHidden(true)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

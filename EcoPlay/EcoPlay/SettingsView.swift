@@ -8,7 +8,14 @@ struct SettingsView: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .center)){
             VStack {
-                HStack {
+                HStack(alignment: .center) {
+                    Spacer()
+                    Text("settings".uppercased())
+                        .font(Font.custom("Play-bold", size: 22))
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(Color.darkGreen)
+                        .kerning(1)
+                        .padding(.leading, 20)
                     Spacer()
                     Button {
                         withAnimation(.spring()) {
@@ -23,7 +30,8 @@ struct SettingsView: View {
                 }
                 Spacer()
                 HStack(alignment: .center) {
-                    Text("Volume").font(Font.custom("Play-bold", size: 14))
+                    Text("Volume")
+                        .font(Font.custom("Play-bold", size: 18))
                         .foregroundStyle(Color.darkGreen)
                     CustomUISlider(
                         value: $volume,
@@ -31,16 +39,20 @@ struct SettingsView: View {
                         maxValue: 1.0,
                         thumbColor: UIColor.backgroundGreen,
                         minTrackColor: UIColor(Color(red: 81/255, green: 139/255, blue: 84/255)),
-                        maxTrackColor: UIColor(Color(red: 27/255, green: 51/255, blue: 28/255))
+                        maxTrackColor: UIColor(Color.darkGreen)
                     )
                 }
-                .padding(.bottom, 20)
+                .padding(.vertical, 20)
+                .padding(.horizontal, 10)
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding()
-            .background(Color(red: 219/255, green: 225/255, blue: 169/255))
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .shadow(color: Color(red: 27/255, green: 51/255, blue: 28/255), radius: 0, x: 0, y: 8)
+            .background(Color.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+            .shadow(color: Color.darkGreen, radius: 0, x: 0, y: 8)
+            .overlay {
+                RoundedRectangle(cornerRadius: 25.0).stroke(.white, lineWidth: 3)
+            }
             .padding(50)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

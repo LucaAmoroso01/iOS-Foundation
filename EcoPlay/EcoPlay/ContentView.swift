@@ -75,6 +75,12 @@ struct ContentView: View {
 
 extension Color {
     static let darkGreen = Color(red: 27/255, green: 51/255, blue: 28/255)
+    
+    static let backgroundTextGreen = Color(red: 103/255, green: 235/255, blue: 0/255)
+    
+    static let cardBackground = Color(red: 219/255, green: 225/255, blue: 169/255)
+    
+    static let backgroundGreen = Color(red: 153.0/255, green: 206.0/255, blue: 119.0/255, opacity: 100)
 }
 
 #Preview {

@@ -38,7 +38,7 @@ struct FirstLandView: View {
                                 .background(
                                     Gradient(colors: [
                                         Color(red: 81/255, green: 139/255, blue: 84/255),
-                                        Color(red: 27/255, green: 51/255, blue: 28/255)
+                                        Color.darkGreen
                                     ])
                                 )
                                 .clipShape(Circle())
