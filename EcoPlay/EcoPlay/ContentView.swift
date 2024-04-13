@@ -55,8 +55,6 @@ struct ContentView: View {
         .background(
             Gradient(colors: [
                 Color.white
-                // Color(red: 81/255, green: 139/255, blue: 84/255),
-                // Color(red: 27/255, green: 51/255, blue: 28/255)
             ])
         )
     }
@@ -73,6 +71,10 @@ struct ContentView: View {
             print("Error loading GIF data: \(error)")
         }
     }
+}
+
+extension Color {
+    static let darkGreen = Color(red: 27/255, green: 51/255, blue: 28/255)
 }
 
 #Preview {
