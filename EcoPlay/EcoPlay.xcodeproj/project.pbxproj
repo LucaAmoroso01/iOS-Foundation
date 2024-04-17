@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922A1E972BCE6F32005CEB1A /* LandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E962BCE6F32005CEB1A /* LandsView.swift */; };
+		922A1E9A2BCE7F2A005CEB1A /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 922A1E992BCE7F2A005CEB1A /* background-music.mp3 */; };
+		922A1E9C2BCE823C005CEB1A /* BackgroundMusicClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E9B2BCE823C005CEB1A /* BackgroundMusicClass.swift */; };
+		922E4A2E2BCE8877005B2B61 /* SoundEffectsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922E4A2D2BCE8877005B2B61 /* SoundEffectsClass.swift */; };
+		922E4A362BCE8FB1005B2B61 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 922E4A352BCE8FB1005B2B61 /* click.mp3 */; };
+		922E4A392BCE91BB005B2B61 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922E4A382BCE91BB005B2B61 /* CustomButton.swift */; };
 		9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADE62BC9354000C44F38 /* FirstLandView.swift */; };
 		9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADE92BC9365E00C44F38 /* OFL.txt */; };
 		9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */; };
 		9270ADEE2BC9365F00C44F38 /* Play-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */; };
 		9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF02BC9413000C44F38 /* SecondLandView.swift */; };
 		9270ADF42BC9548200C44F38 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 9270ADF32BC9548200C44F38 /* NavigationTransitions */; };
-		9270ADF62BC96A7200C44F38 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF52BC96A7200C44F38 /* SettingsView.swift */; };
+		9270ADF62BC96A7200C44F38 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF52BC96A7200C44F38 /* Settings.swift */; };
 		929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */; };
 		929D0B912BC7D238000187FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D0B902BC7D238000187FF /* ContentView.swift */; };
 		929D0B932BC7D239000187FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929D0B922BC7D239000187FF /* Assets.xcassets */; };
@@ -23,13 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		922A1E962BCE6F32005CEB1A /* LandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandsView.swift; sourceTree = "<group>"; };
+		922A1E992BCE7F2A005CEB1A /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		922A1E9B2BCE823C005CEB1A /* BackgroundMusicClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusicClass.swift; sourceTree = "<group>"; };
+		922E4A2D2BCE8877005B2B61 /* SoundEffectsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsClass.swift; sourceTree = "<group>"; };
+		922E4A352BCE8FB1005B2B61 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click.mp3; path = ../../../../../Downloads/click.mp3; sourceTree = "<group>"; };
+		922E4A382BCE91BB005B2B61 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9270ADE62BC9354000C44F38 /* FirstLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLandView.swift; sourceTree = "<group>"; };
 		9270ADE92BC9365E00C44F38 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		9270ADEA2BC9365F00C44F38 /* Play-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Bold.ttf"; sourceTree = "<group>"; };
 		9270ADEB2BC9365F00C44F38 /* Play-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play-Regular.ttf"; sourceTree = "<group>"; };
 		9270ADEF2BC9378400C44F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9270ADF02BC9413000C44F38 /* SecondLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLandView.swift; sourceTree = "<group>"; };
-		9270ADF52BC96A7200C44F38 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9270ADF52BC96A7200C44F38 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		929D0B8B2BC7D238000187FF /* EcoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoPlayApp.swift; sourceTree = "<group>"; };
 		929D0B902BC7D238000187FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +63,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		922A1E982BCE7F11005CEB1A /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				922E4A352BCE8FB1005B2B61 /* click.mp3 */,
+				922A1E992BCE7F2A005CEB1A /* background-music.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		922E4A372BCE9181005B2B61 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				9270ADF52BC96A7200C44F38 /* Settings.swift */,
+				922E4A382BCE91BB005B2B61 /* CustomButton.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		9270ADE82BC9362C00C44F38 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,16 +110,20 @@
 		929D0B8D2BC7D238000187FF /* EcoPlay */ = {
 			isa = PBXGroup;
 			children = (
+				922E4A372BCE9181005B2B61 /* components */,
+				922A1E982BCE7F11005CEB1A /* sounds */,
 				9270ADEF2BC9378400C44F38 /* Info.plist */,
 				9270ADE82BC9362C00C44F38 /* fonts */,
 				92BD152B2BC7E51B006767D1 /* images */,
 				929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */,
 				929D0B902BC7D238000187FF /* ContentView.swift */,
 				9270ADE62BC9354000C44F38 /* FirstLandView.swift */,
-				9270ADF52BC96A7200C44F38 /* SettingsView.swift */,
+				922A1E962BCE6F32005CEB1A /* LandsView.swift */,
 				9270ADF02BC9413000C44F38 /* SecondLandView.swift */,
 				929D0B922BC7D239000187FF /* Assets.xcassets */,
 				929D0B942BC7D239000187FF /* Preview Content */,
+				922A1E9B2BCE823C005CEB1A /* BackgroundMusicClass.swift */,
+				922E4A2D2BCE8877005B2B61 /* SoundEffectsClass.swift */,
 			);
 			path = EcoPlay;
 			sourceTree = "<group>";
@@ -181,6 +215,8 @@
 				9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */,
 				929D0B932BC7D239000187FF /* Assets.xcassets in Resources */,
 				9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */,
+				922E4A362BCE8FB1005B2B61 /* click.mp3 in Resources */,
+				922A1E9A2BCE7F2A005CEB1A /* background-music.mp3 in Resources */,
 				92BD152A2BC7E490006767D1 /* recycle.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,11 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9270ADF62BC96A7200C44F38 /* SettingsView.swift in Sources */,
+				922A1E9C2BCE823C005CEB1A /* BackgroundMusicClass.swift in Sources */,
+				922E4A2E2BCE8877005B2B61 /* SoundEffectsClass.swift in Sources */,
+				9270ADF62BC96A7200C44F38 /* Settings.swift in Sources */,
 				929D0B912BC7D238000187FF /* ContentView.swift in Sources */,
 				9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */,
 				9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */,
 				929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */,
+				922A1E972BCE6F32005CEB1A /* LandsView.swift in Sources */,
+				922E4A392BCE91BB005B2B61 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

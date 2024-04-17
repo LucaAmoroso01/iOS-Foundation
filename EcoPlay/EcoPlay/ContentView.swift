@@ -15,48 +15,41 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                Image("logo")
-                    .resizable()
-                    .frame(width: 280, height: 250)
-                Spacer()
-                
-                if let data = imageData {
-                    GIFImage(data: data)
-                        .padding(40)
-                        .background(Color.white)
-                        .clipShape(Circle())
-                        .frame(width: 300, height: 250)
-                        .shadow(color: Color(red: 0/255, green: 129/255, blue: 31/255), radius: 0, x: 4, y: 10)
+            ZStack {
+                Color.backgroundGreen.ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 280, height: 250)
+                    Spacer()
+                    
+                    if let data = imageData {
+                        GIFImage(data: data)
+                            .padding(40)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .frame(width: 300, height: 250)
+                            .shadow(color: Color(red: 0/255, green: 129/255, blue: 31/255), radius: 0, x: 4, y: 10)
+                    }
+                    Spacer()
                 }
-                Spacer()
-            }
-            .navigationDestination(
-                isPresented: $shouldNavigate,
-                destination: {
-                    FirstLandView()
-                }
-            )
-            .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color(red: 153.0/255, green: 206.0/255, blue: 119.0/255, opacity: 1.0))
-            .navigationBarHidden(true)
-            .onAppear {
-                loadData()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    shouldNavigate = true
+                .navigationDestination(
+                    isPresented: $shouldNavigate,
+                    destination: {
+                        LandsView()
+                    }
+                )
+                .navigationBarHidden(true)
+                .onAppear {
+                    loadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        shouldNavigate.toggle()
+                    }
                 }
             }
         }
-        .navigationTransition(
-            .fade(.in).combined(with: .fade(.cross))
-            .animation(.easeIn(duration: 0.8))
-        )
-        .background(
-            Gradient(colors: [
-                Color.white
-            ])
-        )
+        .navigationTransition(.fade(.out).animation(.easeInOut(duration: 0.6)))
     }
     
     private func loadData() {
