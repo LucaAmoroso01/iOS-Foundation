@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomButton: View {
     @Binding var isActiveClick: Bool
-    private let clickSound = SoundEffectsClass.getSoundFromKey(key: "click")
+    private let clickSound = SoundEffects.getSoundFromKey(key: "click")
     var buttonText: String
     
     var body: some View {

@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-class SoundEffectsClass {
+class SoundEffects {
     private static let click = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "click", withExtension: "mp3")!)
     
     private static let sounds = ["click": click]

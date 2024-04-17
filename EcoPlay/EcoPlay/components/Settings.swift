@@ -5,8 +5,8 @@ struct Settings: View {
     @Binding var isActive: Bool
     @Binding var isActiveSoundEffects: Bool
     @Binding var isActiveMusic: Bool
-    private let backgroundMusic = BackgroundMusicClass.getBackgroundMusic()
-    private let soundEffects = SoundEffectsClass.getSoundEffects()
+    private let backgroundMusic = BackgroundMusic.getBackgroundMusic()
+    private let soundEffects = SoundEffects.getSoundEffects()
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .center)) {

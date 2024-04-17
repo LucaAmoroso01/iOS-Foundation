@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-class BackgroundMusicClass {
+class BackgroundMusic {
     private static let backgroundMusic = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "background-music", withExtension: "mp3")!)
     
     private init() {}

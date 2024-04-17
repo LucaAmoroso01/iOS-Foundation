@@ -15,7 +15,7 @@ struct LandsView: View {
     @State private var isActiveSoundEffects = true
     @State private var isActiveMusic = true
     
-    private let backgroundMusic = BackgroundMusicClass.getBackgroundMusic()
+    private let backgroundMusic = BackgroundMusic.getBackgroundMusic()
     
     var body: some View {
         ZStack {
