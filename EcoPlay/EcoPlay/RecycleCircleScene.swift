@@ -52,16 +52,18 @@ struct Popup {
         self.popupShape.addChild(lampadino)
         self.popupShape.addChild(triangle)
         
+        self.popupShape.run(SKAction.move(by: CGVector(dx: 0, dy: -30), duration: 0.8))
+        
         self.popupBackground.addChild(self.popupShape)
     }
 }
 
+struct DefaultPopupSizes {
+    static let width: Double = 450
+    static let height: Double = 150
+}
+
 class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
-    enum DefaultPopupSizes: Double {
-        case width = 450
-        case height = 150
-    }
-    
     private var wasteObjects = [
         WasteObject.init(wasteObjectType: (WasteTypesCategories.plastic), wasteObject: SKSpriteNode(imageNamed: "plastic-bottle"), name: "plastic", wasteObjectName: "plastic bottle"),
         WasteObject.init(wasteObjectType: (WasteTypesCategories.organic), wasteObject: SKSpriteNode(imageNamed: "ice-cream"), name: "organic", wasteObjectName: "ice cream"),
@@ -100,10 +102,6 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         createPopup(text: "First object to recycle is \"\(String(currentWasteObject!.wasteObjectName))\"", textPosition: CGPoint(x: 50, y: -400), name: "firstWasteSpawned")
         createPopup(text: "Drag it to correct material type to recycle it", textPosition: CGPoint(x: 50, y: -427), name: "drag")
         createPopup(text: "You missed the right choice. This waste went into \(String(describing: currentWasteObject!.name)). Let's try with another one!", textPosition: CGPoint(x: 50, y: -428), name: "lose", popupSize: CGSize(width: 450, height: 190))
-        
-        popups.values.forEach({ popup in
-            popup.popupShape.run(SKAction.move(by: CGVector(dx: 0, dy: -30), duration: 0.8))
-        })
         
         showPopupInOrderOnTap()
     }
@@ -219,13 +217,11 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     }
         
     func displayPopup(popupName: String) {
-        closePopup(name: popupName)
         currentPopup = popupName
-        
         self.addChild(self.popups[popupName]!.popupBackground)
     }
     
-    func createPopup(text: String, textPosition: CGPoint, name: String, popupSize: CGSize = CGSize(width: DefaultPopupSizes.width.rawValue, height: DefaultPopupSizes.height.rawValue)) {
+    func createPopup(text: String, textPosition: CGPoint, name: String, popupSize: CGSize = CGSize(width: DefaultPopupSizes.width, height: DefaultPopupSizes.height)) {
         
         let popupBackground = SKSpriteNode(color: UIColor(Color.darkGreen.opacity(0.5)), size: CGSize(width: frame.width, height: frame.height))
         popupBackground.zPosition = 80
