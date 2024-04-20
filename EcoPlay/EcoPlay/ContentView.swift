@@ -74,6 +74,8 @@ extension Color {
     static let cardBackground = Color(red: 219/255, green: 225/255, blue: 169/255)
     
     static let backgroundGreen = Color(red: 153.0/255, green: 206.0/255, blue: 119.0/255, opacity: 100)
+    
+    static let backgroundImageGray = Color(red: 217/255, green: 217/255, blue: 217/255, opacity: 0.72)
 }
 
 #Preview {

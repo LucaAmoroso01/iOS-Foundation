@@ -9,11 +9,13 @@ import SwiftUI
 
 struct CustomButton: View {
     @Binding var isActiveClick: Bool
+    @Binding var navigateToGame: Bool
     private let clickSound = SoundEffects.getSoundFromKey(key: "click")
     var buttonText: String
     
     var body: some View {
         Button(action: {
+            navigateToGame.toggle()
             if let click = clickSound {
                 if isActiveClick {
                     click.play()
@@ -37,5 +39,5 @@ struct CustomButton: View {
 }
 
 #Preview {
-    CustomButton(isActiveClick: .constant(true), buttonText: "test")
+    CustomButton(isActiveClick: .constant(true), navigateToGame: .constant(false), buttonText: "test")
 }

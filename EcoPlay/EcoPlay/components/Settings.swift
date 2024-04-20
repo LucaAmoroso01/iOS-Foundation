@@ -7,7 +7,7 @@ struct Settings: View {
     @Binding var isActiveMusic: Bool
     private let backgroundMusic = BackgroundMusic.getBackgroundMusic()
     private let soundEffects = SoundEffects.getSoundEffects()
-    
+        
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .center)) {
             Color.primary.opacity(0.35).ignoresSafeArea()

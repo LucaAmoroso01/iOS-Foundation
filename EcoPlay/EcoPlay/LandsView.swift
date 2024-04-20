@@ -30,7 +30,7 @@ struct LandsView: View {
                     ForEach(views, id: \.self) { view in
                         ZStack {
                             if view == "firstLandView" {
-                                FirstLandView(isActiveSoundEffects: $isActiveSoundEffects).tag("firstLandView")
+                                FirstLandView(isActiveSoundEffects: $isActiveSoundEffects, isActiveMusic: $isActiveMusic).tag("firstLandView")
                             } else {
                                 SecondLandView(isActiveSoundEffects: $isActiveSoundEffects).tag("secondLandView")
                             }
@@ -74,7 +74,7 @@ struct LandsView: View {
         }
         .onAppear() {
             backgroundMusic.numberOfLoops = -1
-            backgroundMusic.play()
+//            backgroundMusic.play()
         }
     }
 }
