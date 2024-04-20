@@ -27,12 +27,9 @@ struct RecycleCircleGameView: View {
             ZStack {
                 if showSettings {
                     Settings(isActive: $showSettings, isActiveSoundEffects: $isActiveSoundeEffects, isActiveMusic: $isActiveMusic)
-                        .background(Color.darkGreen.opacity(0.6))
+                        .foregroundStyle(Color.darkGreen.opacity(0.6))
                         .zIndex(200.0)
                 }
-                SpriteView(scene: scene)
-                    .ignoresSafeArea(.all)
-                    .navigationBarBackButtonHidden(true)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
