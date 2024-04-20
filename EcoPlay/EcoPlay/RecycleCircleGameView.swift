@@ -18,10 +18,10 @@ struct RecycleCircleGameView: View {
     @StateObject private var scene: RecycleCircleScene = {
         let scene = SKScene(fileNamed: "RecycleCircleScene") as! RecycleCircleScene
         scene.scaleMode = .aspectFill
-                
+        
         return scene
     }()
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -30,6 +30,9 @@ struct RecycleCircleGameView: View {
                         .foregroundStyle(Color.darkGreen.opacity(0.6))
                         .zIndex(200.0)
                 }
+                SpriteView(scene: scene)
+                    .ignoresSafeArea(.all)
+                    .navigationBarBackButtonHidden(true)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
