@@ -45,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		5ACC53632BD51F190013507E /* RecycleCircleGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleGameView.swift; sourceTree = "<group>"; };
-		5ACC53652BD520470013507E /* RecycleCircleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = RecycleCircleScene.sks; path = ../../../../Desktop/RecycleCircleScene.sks; sourceTree = "<group>"; };
+		5ACC53652BD520470013507E /* RecycleCircleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RecycleCircleScene.sks; sourceTree = "<group>"; };
 		5ACC53672BD520ED0013507E /* RecycleCircleGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RecycleCircleGameScene.sks; sourceTree = "<group>"; };
 		5ACC53692BD522840013507E /* RecycleCircleGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleGameScene.swift; sourceTree = "<group>"; };
 		922A1E962BCE6F32005CEB1A /* LandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandsView.swift; sourceTree = "<group>"; };
