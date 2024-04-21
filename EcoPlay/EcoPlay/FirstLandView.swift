@@ -52,7 +52,7 @@ struct FirstLandView: View {
                     CustomButton(isActiveClick: $isActiveSoundEffects, navigateToGame: $navigatoToGame, buttonText: "Start")
                         .navigationDestination(
                             isPresented: $navigatoToGame, destination: {
-                                RecycleCircleGameView(isActiveSoundeEffects: $isActiveSoundEffects, isActiveMusic: $isActiveMusic)
+                                RecycleCircleGameView()
                             })
                         .padding(.top, 40)
                     Spacer()

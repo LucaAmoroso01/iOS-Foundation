@@ -95,13 +95,13 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         loadLabels()
         loadWasteObject()
         
+        
         createPopup(text: "Hi I'm Lampadino and I'll assist you to recycle some wastes.", textPosition: CGPoint(x: 50, y: -431), name: "first")
         createPopup(text: "You learned how to recycle! Test your skills with the game!", textPosition: CGPoint(x: 50, y: -426), name: "last")
         createPopup(text: "Good job little hero!", textPosition: CGPoint(x: 50, y: -390), name: "win")
         createPopup(text: "This is the first waste", textPosition: CGPoint(x: 50, y: -390), name: "firstWaste")
         createPopup(text: "First object to recycle is \"\(String(currentWasteObject!.wasteObjectName))\"", textPosition: CGPoint(x: 50, y: -400), name: "firstWasteSpawned")
         createPopup(text: "Drag it to correct material type to recycle it", textPosition: CGPoint(x: 50, y: -427), name: "drag")
-        createPopup(text: "You missed the right choice. This waste went into \(String(describing: currentWasteObject!.name)). Let's try with another one!", textPosition: CGPoint(x: 50, y: -428), name: "lose", popupSize: CGSize(width: 450, height: 190))
         
         showPopupInOrderOnTap()
     }
@@ -269,6 +269,7 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     }
     
     func lose(node nodeToRemove: String) {
+        createPopup(text: "You missed the right choice. This waste went into \(String(describing: currentWasteObject!.name)). Let's try with another one!", textPosition: CGPoint(x: 50, y: -428), name: "lose", popupSize: CGSize(width: 450, height: 190))
         displayPopup(popupName: "lose")
         removeWasteNode(node: nodeToRemove)
         loadWasteObject()

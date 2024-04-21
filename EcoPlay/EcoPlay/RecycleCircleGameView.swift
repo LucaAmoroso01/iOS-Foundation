@@ -11,9 +11,6 @@ import NavigationTransitions
 
 struct RecycleCircleGameView: View {
     @State private var shouldGoBack = false
-    @State private var showSettings = false
-    @Binding var isActiveSoundeEffects: Bool
-    @Binding var isActiveMusic: Bool
     
     @StateObject private var scene: RecycleCircleScene = {
         let scene = SKScene(fileNamed: "RecycleCircleScene") as! RecycleCircleScene
@@ -25,27 +22,11 @@ struct RecycleCircleGameView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if showSettings {
-                    Settings(isActive: $showSettings, isActiveSoundEffects: $isActiveSoundeEffects, isActiveMusic: $isActiveMusic)
-                        .foregroundStyle(Color.darkGreen.opacity(0.6))
-                        .zIndex(200.0)
-                }
                 SpriteView(scene: scene)
                     .ignoresSafeArea(.all)
                     .navigationBarBackButtonHidden(true)
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        withAnimation(.easeInOut, {
-                            showSettings.toggle()
-                        })
-                    } label: {
-                        Image(systemName: "gearshape.fill")
-                            .foregroundStyle(Color.darkGreen.opacity(showSettings ? 0.35 : 1.0))
-                    }
-                    .disabled(showSettings)
-                }
                 ToolbarItem(placement: .topBarLeading, content: {
                     Button(action: {
                         shouldGoBack.toggle()
@@ -67,5 +48,5 @@ struct RecycleCircleGameView: View {
 }
 
 #Preview {
-    RecycleCircleGameView(isActiveSoundeEffects: .constant(true), isActiveMusic: .constant(true))
+    RecycleCircleGameView()
 }
