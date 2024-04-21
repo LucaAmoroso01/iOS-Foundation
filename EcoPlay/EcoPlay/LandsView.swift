@@ -44,7 +44,7 @@ struct LandsView: View {
         }
         .onAppear() {
             backgroundMusic.numberOfLoops = -1
-//            backgroundMusic.play()
+            backgroundMusic.play()
         }
     }
 }
