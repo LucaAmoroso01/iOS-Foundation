@@ -1,32 +1,32 @@
 //
-//  RecycleCircleScene.swift
+//  RecycleCircleGameScene.swift
 //  EcoPlay
 //
-//  Created by Rocco Del Prete on 17/04/2024.
+//  Created by Antonio Capasso on 21/04/24.
 //
 
 import SpriteKit
 import SwiftUI
 
-struct ObjectCategories {
+struct ObjectCategoriesGame {
     static let objectCategory = UInt32(16)
 }
 
-struct WasteTypesCategories {
+struct WasteTypesCategoriesGame {
     static let organic: UInt32 = 0b0
     static let plastic: UInt32 = 0b1
     static let paper: UInt32 = 0b10
     static let mixed: UInt32 = 0b11
 }
 
-struct WasteObject {
+struct WasteObjectGame {
     let wasteObjectType: UInt32
     let wasteObject: SKSpriteNode
     let name: String
     let wasteObjectName: String
 }
 
-struct Popup {
+struct PopupGame {
     var popupShape: SKShapeNode = SKShapeNode()
     var popupBackground: SKNode = SKSpriteNode()
     var popupText: SKLabelNode = SKLabelNode()
@@ -58,12 +58,12 @@ struct Popup {
     }
 }
 
-struct DefaultPopupSizes {
+struct DefaultPopupSizesGame {
     static let width: Double = 450
     static let height: Double = 150
 }
 
-class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
+class RecycleCircleGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     private var wasteObjects = [
         WasteObject.init(wasteObjectType: (WasteTypesCategories.plastic), wasteObject: SKSpriteNode(imageNamed: "plastic-bottle"), name: "plastic", wasteObjectName: "plastic bottle"),
         WasteObject.init(wasteObjectType: (WasteTypesCategories.organic), wasteObject: SKSpriteNode(imageNamed: "ice-cream"), name: "organic", wasteObjectName: "ice cream"),
@@ -76,13 +76,19 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         WasteObject.init(wasteObjectType: (WasteTypesCategories.mixed), wasteObject: SKSpriteNode(imageNamed: "pizza-cardboard"), name: "mixed", wasteObjectName: "pizza cardboard"),
         WasteObject.init(wasteObjectType: (WasteTypesCategories.paper), wasteObject: SKSpriteNode(imageNamed: "wastepaper"), name: "paper", wasteObjectName: "wastepaper"),
         WasteObject.init(wasteObjectType: (WasteTypesCategories.organic), wasteObject: SKSpriteNode(imageNamed: "banana-peel"), name: "organic", wasteObjectName: "banana peel"),
+        WasteObject.init(wasteObjectType: (WasteTypesCategories.plastic), wasteObject: SKSpriteNode(imageNamed: "HairBrush"), name: "plastic", wasteObjectName: "hairBrush"),
+        WasteObject.init(wasteObjectType: (WasteTypesCategories.organic), wasteObject: SKSpriteNode(imageNamed: "steak"), name: "organic", wasteObjectName: "steak"),
     ]
-
+    
     private var popups: [String:Popup] = [:]
     private var currentPopup: String?
     
     private var currentWasteObject: WasteObject?
     private var currentWasteIndex: Int = 0
+    
+    private var score: Int = 0
+    
+    private var lives: Int = 3
     
     @Published var isGameEnded = false
     
@@ -95,13 +101,7 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         loadLabels()
         loadWasteObject()
         
-        
-        createPopup(text: "Hi I'm Lampadino and I'll assist you to recycle some wastes.", textPosition: CGPoint(x: 50, y: -431), name: "first")
-        createPopup(text: "You learned how to recycle! Test your skills with the game!", textPosition: CGPoint(x: 50, y: -426), name: "last")
-        createPopup(text: "Good job little hero!", textPosition: CGPoint(x: 50, y: -390), name: "win")
-        createPopup(text: "This is the first waste", textPosition: CGPoint(x: 50, y: -390), name: "firstWaste")
-        createPopup(text: "First object to recycle is \"\(String(currentWasteObject!.wasteObjectName))\"", textPosition: CGPoint(x: 50, y: -400), name: "firstWasteSpawned")
-        createPopup(text: "Drag it to correct material type to recycle it", textPosition: CGPoint(x: 50, y: -427), name: "drag")
+        createPopup(text: "Now test your skills. You have 3 errors available.", textPosition: CGPoint(x: 50, y: -431), name: "first")
         
         showPopupInOrderOnTap()
     }
@@ -114,11 +114,30 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         if nodeTouched.name == "popupBackground" {
             closePopup(name: currentPopup!)
             showPopupInOrderOnTap()
-            
-            if (wasteObjects.count == 0) && (currentPopup == "win" || currentPopup == "lose") {
-                displayPopup(popupName: "last")
-            }
         }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        
+        // Rimuovi il nodo precedente del punteggio se esiste
+           if let existingScoreNode = self.childNode(withName: "scoreLabel") {
+               existingScoreNode.removeFromParent()
+           }
+
+           // Aggiungi un nuovo nodo per il punteggio aggiornato
+           let scoreLabel = mutateLabel(labelRefName: "scoreLabel", text: "Score: \(score)", fontSize: 30)
+           scoreLabel.position = CGPoint(x: -140, y: 450)
+           self.addChild(scoreLabel)
+
+           // Rimuovi il nodo precedente per i tentativi se esiste
+           if let existingAttemptsNode = self.childNode(withName: "attemptsLabel") {
+               existingAttemptsNode.removeFromParent()
+           }
+
+           // Aggiungi un nuovo nodo per i tentativi aggiornati
+           let attemptsLabel = mutateLabel(labelRefName: "attemptsLabel", text: "Lives: \(lives)", fontSize: 30)
+           attemptsLabel.position = CGPoint(x: 165, y: 450)
+           self.addChild(attemptsLabel)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -174,6 +193,11 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
             
             wasteShape.addChild(randomWaste.wasteObject)
             self.addChild(wasteShape)
+        } else {
+            if lives > 0 {
+                displayPopup(popupName: "ending")
+            }
+            
         }
     }
     
@@ -209,13 +233,14 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         mixedLabel.physicsBody?.collisionBitMask = UInt32(0)
         mixedLabel.physicsBody?.affectedByGravity = false
         self.addChild(mixedLabel)
+        
     }
     
     func removeWasteNode(node nodeToRemove: String) {
         wasteObjects[currentWasteIndex].wasteObject.removeFromParent()
         wasteObjects.remove(at: currentWasteIndex)
     }
-        
+    
     func displayPopup(popupName: String) {
         currentPopup = popupName
         self.addChild(self.popups[popupName]!.popupBackground)
@@ -263,14 +288,18 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     }
     
     func win(node nodeToRemove: String) {
-        displayPopup(popupName: "win")
+        score += 10
+        createPopup(text: "You reached this score: \(score).", textPosition: CGPoint(x: 50, y: -415), name: "ending")
         removeWasteNode(node: nodeToRemove)
         loadWasteObject()
     }
     
     func lose(node nodeToRemove: String) {
-        createPopup(text: "You missed the right choice. This waste went into \(String(describing: currentWasteObject!.name)). Let's try with another one!", textPosition: CGPoint(x: 50, y: -428), name: "lose", popupSize: CGSize(width: 450, height: 190))
-        displayPopup(popupName: "lose")
+        lives -= 1
+        if lives == 0 {
+            createPopup(text: "Ops... You’ve finished your attempts. You reached this score: \(score).", textPosition: CGPoint(x: 50, y: -427), name: "endingLose")
+            displayPopup(popupName: "endingLose")
+        }
         removeWasteNode(node: nodeToRemove)
         loadWasteObject()
     }
@@ -283,13 +312,9 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         switch currentPopup {
         case nil:
             displayPopup(popupName: "first")
-        case "first":
-            displayPopup(popupName: "firstWaste")
-        case "firstWaste":
-            displayPopup(popupName: "firstWasteSpawned")
-        case "firstWasteSpawned":
-            displayPopup(popupName: "drag")
-        case "last":
+        case "ending":
+            isGameEnded.toggle()
+        case "endingLose":
             isGameEnded.toggle()
         default:
             closePopup(name: currentPopup!)
@@ -298,7 +323,7 @@ class RecycleCircleScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
 }
 
 extension UIFont {
-    var rounded: UIFont {
+    var roundedGame: UIFont {
         guard let desc = self.fontDescriptor.withDesign(.rounded)
         else { return self }
         return UIFont(descriptor: desc, size: self.pointSize)

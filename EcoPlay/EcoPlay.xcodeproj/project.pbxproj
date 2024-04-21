@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ACC53642BD51F190013507E /* RecycleCircleGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC53632BD51F190013507E /* RecycleCircleGameView.swift */; };
+		5ACC53662BD520480013507E /* RecycleCircleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC53652BD520470013507E /* RecycleCircleScene.sks */; };
+		5ACC53682BD520ED0013507E /* RecycleCircleGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC53672BD520ED0013507E /* RecycleCircleGameScene.sks */; };
+		5ACC536A2BD522840013507E /* RecycleCircleGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC53692BD522840013507E /* RecycleCircleGameScene.swift */; };
 		922A1E972BCE6F32005CEB1A /* LandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E962BCE6F32005CEB1A /* LandsView.swift */; };
 		922A1E9A2BCE7F2A005CEB1A /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 922A1E992BCE7F2A005CEB1A /* background-music.mp3 */; };
 		922A1E9C2BCE823C005CEB1A /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E9B2BCE823C005CEB1A /* BackgroundMusic.swift */; };
@@ -19,7 +23,6 @@
 		9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF02BC9413000C44F38 /* SecondLandView.swift */; };
 		9270ADF42BC9548200C44F38 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 9270ADF32BC9548200C44F38 /* NavigationTransitions */; };
 		9270ADF62BC96A7200C44F38 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9270ADF52BC96A7200C44F38 /* Settings.swift */; };
-		928CA4A92BD1D9C300F71D99 /* RecycleCircleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 928CA4A82BD1D9C300F71D99 /* RecycleCircleScene.sks */; };
 		928CA4B32BD1E15E00F71D99 /* SF-Pro-Rounded-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928CA4AA2BD1E15D00F71D99 /* SF-Pro-Rounded-Black.ttf */; };
 		928CA4B42BD1E15E00F71D99 /* SF-Pro-Rounded-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928CA4AB2BD1E15D00F71D99 /* SF-Pro-Rounded-Heavy.ttf */; };
 		928CA4B52BD1E15E00F71D99 /* SF-Pro-Rounded-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928CA4AC2BD1E15D00F71D99 /* SF-Pro-Rounded-Thin.ttf */; };
@@ -37,10 +40,14 @@
 		92B5711C2BD014230065282B /* RecycleCircleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5711B2BD014230065282B /* RecycleCircleScene.swift */; };
 		92BD152A2BC7E490006767D1 /* recycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92BD15292BC7E490006767D1 /* recycle.gif */; };
 		92BD15332BC8127E006767D1 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 92BD15322BC8127E006767D1 /* SwiftUIGIF */; };
-		92D567A52BD1021100C4CA9F /* RecycleCircleGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D567A42BD1021100C4CA9F /* RecycleCircleGameView.swift */; };
+		92D567A52BD1021100C4CA9F /* RecycleCircleTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D567A42BD1021100C4CA9F /* RecycleCircleTutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACC53632BD51F190013507E /* RecycleCircleGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleGameView.swift; sourceTree = "<group>"; };
+		5ACC53652BD520470013507E /* RecycleCircleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = RecycleCircleScene.sks; path = ../../../../Desktop/RecycleCircleScene.sks; sourceTree = "<group>"; };
+		5ACC53672BD520ED0013507E /* RecycleCircleGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RecycleCircleGameScene.sks; sourceTree = "<group>"; };
+		5ACC53692BD522840013507E /* RecycleCircleGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleGameScene.swift; sourceTree = "<group>"; };
 		922A1E962BCE6F32005CEB1A /* LandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandsView.swift; sourceTree = "<group>"; };
 		922A1E992BCE7F2A005CEB1A /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
 		922A1E9B2BCE823C005CEB1A /* BackgroundMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		9270ADEF2BC9378400C44F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9270ADF02BC9413000C44F38 /* SecondLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLandView.swift; sourceTree = "<group>"; };
 		9270ADF52BC96A7200C44F38 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		928CA4A82BD1D9C300F71D99 /* RecycleCircleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = RecycleCircleScene.sks; path = ../RecycleCircleScene.sks; sourceTree = "<group>"; };
 		928CA4AA2BD1E15D00F71D99 /* SF-Pro-Rounded-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Black.ttf"; sourceTree = "<group>"; };
 		928CA4AB2BD1E15D00F71D99 /* SF-Pro-Rounded-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Heavy.ttf"; sourceTree = "<group>"; };
 		928CA4AC2BD1E15D00F71D99 /* SF-Pro-Rounded-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Thin.ttf"; sourceTree = "<group>"; };
@@ -71,7 +77,7 @@
 		92B571172BCFFE580065282B /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		92B5711B2BD014230065282B /* RecycleCircleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleScene.swift; sourceTree = "<group>"; };
 		92BD15292BC7E490006767D1 /* recycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle.gif; sourceTree = "<group>"; };
-		92D567A42BD1021100C4CA9F /* RecycleCircleGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleGameView.swift; sourceTree = "<group>"; };
+		92D567A42BD1021100C4CA9F /* RecycleCircleTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCircleTutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,11 +156,14 @@
 				9270ADE82BC9362C00C44F38 /* fonts */,
 				92BD152B2BC7E51B006767D1 /* images */,
 				929D0B8E2BC7D238000187FF /* EcoPlayApp.swift */,
+				5ACC53652BD520470013507E /* RecycleCircleScene.sks */,
+				5ACC53672BD520ED0013507E /* RecycleCircleGameScene.sks */,
 				92B5711B2BD014230065282B /* RecycleCircleScene.swift */,
-				928CA4A82BD1D9C300F71D99 /* RecycleCircleScene.sks */,
+				5ACC53692BD522840013507E /* RecycleCircleGameScene.swift */,
 				929D0B902BC7D238000187FF /* ContentView.swift */,
 				9270ADE62BC9354000C44F38 /* FirstLandView.swift */,
-				92D567A42BD1021100C4CA9F /* RecycleCircleGameView.swift */,
+				92D567A42BD1021100C4CA9F /* RecycleCircleTutorialView.swift */,
+				5ACC53632BD51F190013507E /* RecycleCircleGameView.swift */,
 				922A1E962BCE6F32005CEB1A /* LandsView.swift */,
 				9270ADF02BC9413000C44F38 /* SecondLandView.swift */,
 				929D0B922BC7D239000187FF /* Assets.xcassets */,
@@ -254,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACC53682BD520ED0013507E /* RecycleCircleGameScene.sks in Resources */,
 				928CA4BB2BD1E15E00F71D99 /* SF-Pro-Rounded-Bold.ttf in Resources */,
 				928CA4B92BD1E15E00F71D99 /* SF-Pro-Rounded-Regular.ttf in Resources */,
 				928CA4B52BD1E15E00F71D99 /* SF-Pro-Rounded-Thin.ttf in Resources */,
@@ -268,7 +278,7 @@
 				9270ADED2BC9365F00C44F38 /* Play-Bold.ttf in Resources */,
 				928CA4B32BD1E15E00F71D99 /* SF-Pro-Rounded-Black.ttf in Resources */,
 				929D0B932BC7D239000187FF /* Assets.xcassets in Resources */,
-				928CA4A92BD1D9C300F71D99 /* RecycleCircleScene.sks in Resources */,
+				5ACC53662BD520480013507E /* RecycleCircleScene.sks in Resources */,
 				9270ADEC2BC9365F00C44F38 /* OFL.txt in Resources */,
 				922A1E9A2BCE7F2A005CEB1A /* background-music.mp3 in Resources */,
 				92BD152A2BC7E490006767D1 /* recycle.gif in Resources */,
@@ -282,15 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACC53642BD51F190013507E /* RecycleCircleGameView.swift in Sources */,
 				922A1E9C2BCE823C005CEB1A /* BackgroundMusic.swift in Sources */,
 				922E4A2E2BCE8877005B2B61 /* SoundEffects.swift in Sources */,
 				9270ADF62BC96A7200C44F38 /* Settings.swift in Sources */,
+				5ACC536A2BD522840013507E /* RecycleCircleGameScene.swift in Sources */,
 				929D0B912BC7D238000187FF /* ContentView.swift in Sources */,
 				9270ADF12BC9413000C44F38 /* SecondLandView.swift in Sources */,
 				9270ADE72BC9354000C44F38 /* FirstLandView.swift in Sources */,
 				929D0B8F2BC7D238000187FF /* EcoPlayApp.swift in Sources */,
 				922A1E972BCE6F32005CEB1A /* LandsView.swift in Sources */,
-				92D567A52BD1021100C4CA9F /* RecycleCircleGameView.swift in Sources */,
+				92D567A52BD1021100C4CA9F /* RecycleCircleTutorialView.swift in Sources */,
 				92B5711C2BD014230065282B /* RecycleCircleScene.swift in Sources */,
 				922E4A392BCE91BB005B2B61 /* CustomButton.swift in Sources */,
 			);

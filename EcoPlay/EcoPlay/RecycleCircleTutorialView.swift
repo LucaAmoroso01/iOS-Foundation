@@ -9,11 +9,11 @@ import SwiftUI
 import SpriteKit
 import NavigationTransitions
 
-struct RecycleCircleGameView: View {
+struct RecycleCircleTutorialView: View {
     @State private var shouldGoBack = false
     
-    @StateObject private var scene: RecycleCircleGameScene = {
-        let scene = SKScene(fileNamed: "RecycleCircleGameScene") as! RecycleCircleGameScene
+    @StateObject private var scene: RecycleCircleScene = {
+        let scene = SKScene(fileNamed: "RecycleCircleScene") as! RecycleCircleScene
         scene.scaleMode = .aspectFill
         
         return scene

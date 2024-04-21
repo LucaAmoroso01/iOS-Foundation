@@ -9,13 +9,15 @@ import SwiftUI
 
 struct CustomButton: View {
     @Binding var isActiveClick: Bool
-    @Binding var navigateToGame: Bool
+    @Binding var navigate: Bool
     private let clickSound = SoundEffects.getSoundFromKey(key: "click")
     var buttonText: String
+    var horizontalPadding: CGFloat = 40
+    var verticalPadding: CGFloat = 15
     
     var body: some View {
         Button(action: {
-            navigateToGame.toggle()
+            navigate.toggle()
             if let click = clickSound {
                 if isActiveClick {
                     click.play()
@@ -23,10 +25,10 @@ struct CustomButton: View {
             }
         }, label: {
             Text(buttonText)
-                .font(Font.custom("Play-Bold", size: 24))
+                .font(Font.custom("Play-Bold", size: 22))
                 .kerning(2)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 15)
+                .padding(.horizontal, horizontalPadding)
+                .padding(.vertical, verticalPadding)
                 .foregroundStyle(.white)
                 .shadow(color: .black.opacity(25/100), radius: 2, x: 0, y: 4)
                 .blur(radius: 0.4)
@@ -39,5 +41,5 @@ struct CustomButton: View {
 }
 
 #Preview {
-    CustomButton(isActiveClick: .constant(true), navigateToGame: .constant(false), buttonText: "test")
+    CustomButton(isActiveClick: .constant(true), navigate: .constant(false), buttonText: "test")
 }

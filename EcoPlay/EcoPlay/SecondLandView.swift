@@ -2,6 +2,8 @@
 //  LandView.swift
 //  EcoPlay
 //
+//  Future features
+//
 //  Created by Rocco Del Prete on 11/04/2024.
 //
 
@@ -140,7 +142,7 @@ struct SecondLandView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 21.0))
                     .shadow(color: Color.darkGreen, radius: 0, x: 0, y: 8)
                 }
-                CustomButton(isActiveClick: $isActiveSoundEffects, navigateToGame: .constant(false), buttonText: "Start")
+                CustomButton(isActiveClick: $isActiveSoundEffects, navigate: .constant(false), buttonText: "Start")
                     .padding(.top, 40)
                 Spacer()
             }

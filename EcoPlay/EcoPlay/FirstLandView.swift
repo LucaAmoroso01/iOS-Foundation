@@ -12,7 +12,8 @@ struct FirstLandView: View {
     @State private var showSettings = false
     @Binding var isActiveSoundEffects: Bool
     @Binding var isActiveMusic: Bool
-    @State private var navigatoToGame = false
+    @State private var navigateToTutorial = false
+    @State private var navigateToGame = false
     
     var body: some View {
         NavigationStack {
@@ -49,12 +50,20 @@ struct FirstLandView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 21.0))
                         .shadow(color: Color.darkGreen, radius: 0, x: 0, y: 8)
                     }
-                    CustomButton(isActiveClick: $isActiveSoundEffects, navigateToGame: $navigatoToGame, buttonText: "Start")
-                        .navigationDestination(
-                            isPresented: $navigatoToGame, destination: {
-                                RecycleCircleGameView()
-                            })
-                        .padding(.top, 40)
+                    VStack(spacing: 30){
+                        CustomButton(isActiveClick: $isActiveSoundEffects, navigate: $navigateToTutorial, buttonText: "Tutorial")
+                            .navigationDestination(
+                                isPresented: $navigateToTutorial, destination: {
+                                    RecycleCircleTutorialView()
+                                })
+                        CustomButton(isActiveClick: $isActiveSoundEffects, navigate: $navigateToGame, buttonText: "Game", horizontalPadding: 55)
+                            .navigationDestination(
+                                isPresented: $navigateToGame, destination: {
+                                    RecycleCircleGameView()
+                                })
+                    }
+                    .padding(.horizontal, 14)
+                    .padding(.top, 40)
                     Spacer()
                 }
                 .navigationBarBackButtonHidden(true)
